@@ -1,0 +1,52 @@
+%!PS
+
+/inch {72 mul} def
+
+/xLocation
+{
+	/R exch def
+	/r exch def
+	/d exch def
+	/theta exch def
+	
+	R r sub theta cos mul R r sub r div theta mul cos d mul add
+		
+} def
+
+/yLocation
+{
+	/R exch def
+	/r exch def
+	/d exch def
+	/theta exch def
+	
+	R r sub theta sin mul R r sub r div theta mul sin d mul sub
+		
+} def
+
+/hypotrochoid
+{
+	/d exch def
+	/r exch def
+	/R exch def
+
+	0 .1 360 
+	{
+		/theta exch def
+				
+		theta 0 eq
+		{
+			theta d r R xLocation theta d r R yLocation	moveto	
+		}
+		{
+			theta d r R xLocation theta d r R yLocation	lineto	
+		} ifelse
+	} for
+
+	stroke
+	showpage
+
+} def
+1 1 scale
+3.8 inch 6 inch translate
+1.5 inch .25 inch 1.5 inch hypotrochoid

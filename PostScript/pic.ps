@@ -1,0 +1,18 @@
+%!PS
+/inch {72 mul} def
+/square 
+{ 
+	/l exch def
+	newpath
+	0 0 moveto
+	0 l lineto
+	l l lineto
+	l 0 lineto
+	closepath
+} def
+3 inch 4 inch translate	
+2 inch square fill
+0.7 0.4 1 %this is the RGB Color Format
+setrgbcolor %obviously sets the color
+1 inch square
+showpage

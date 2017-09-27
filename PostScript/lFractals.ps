@@ -1,0 +1,129 @@
+%!PS
+
+/inch { 72 mul } def
+
+/sierpinski
+{
+	/p exch def 
+	/t p 1 add array def 
+	/a 1.7320508 def
+	
+	1.415 setmiterlimit
+	0 1 p
+	{
+		/m exch def
+		0 1 3 m exp 1 sub
+			{ 
+				/n exch def
+				/n1 n cvi def
+				0 1 m 1 sub
+				{
+					/l exch def
+					t l n1 3 mod put /n1 n1 3 idiv def
+				}for
+
+				/x 0 def
+				/y 0 def
+				0 1 m 1 sub
+				{
+					/k exch def
+					/x x 4 t k get mul 1 add 30 mul cos 2 k exp div add def
+					/y y 4 t k get mul 1 add 30 mul sin 2 k exp div add def
+				}for
+				/u1 x a 2 m 1 add exp div add def 
+				/u2 x a 2 m 1 add exp div sub def
+				/v1 y 1 2 m 1 add exp div sub def 
+				/v2 y 1 2 m exp div add def
+				u1 s v1 s moveto x s v2 s lineto u2 s v1 s lineto u1 s v1 s lineto
+			}for
+	}for
+}bind def
+
+/s{100 mul }def
+4 inch 4 inch translate
+5 sierpinski stroke
+a neg s 1 s moveto a s 1 s lineto 0 -2 s lineto closepath stroke
+
+%=============================================================================================================
+
+/ifDraw false def
+/rotation 0 def
+/squareMagic 2 sqrt def
+/turn {
+         rotation add /rotation exch def
+      } def
+/forward {
+            dup rotation cos mul
+           exch rotation sin mul
+           ifDraw
+                { rlineto }
+                { rmoveto }
+           ifelse
+         } def
+/drawing {
+          /ifDraw false def
+       } def
+/notDrawing {
+             /ifDraw true def
+         } def
+ 
+/dragonCurve { 
+          dup 
+          dup 1 get 0 eq
+              { 0 get forward } 
+              { dup 2 get 45 mul turn
+                  dup aload pop pop
+                  1 sub exch squareMagic div exch
+                  1 3 array astore dragonCurve pop
+                dup 2 get 90 mul neg turn
+                  dup aload pop pop
+                  1 sub exch squareMagic div exch
+                  -1 3 array astore dragonCurve
+                dup 2 get 45 mul turn
+              }
+          ifelse
+          pop
+        } def
+
+-1 inch 4 inch moveto notDrawing [ 300 12 1 ] dragonCurve stroke
+
+%=====================================================================================
+
+/max 2147483647 def
+
+/f 50 def
+
+/spread
+{
+	rand //max div .5 sub 2 mul mul add
+} bind def
+
+/spline
+{
+	0 0 moveto 0 .1 f mul spread .33 f mul
+	0 .1 f mul spread .66 f mul
+	0 f curveto stroke
+} bind def
+
+/coolTree
+{
+	spline 0 f translate
+	1 sub dup 0 gt
+	{
+		gsave 45 15 spread rotate .7071 .2 spread dup scale
+		coolTree
+		grestore
+		-45 15 spread rotate .7071 .2 spread dup scale
+		coolTree
+	} if 1 add
+	gsave 
+	0 1 0 setrgbcolor spline grestore
+} bind def
+
+
+22121943 srand
+
+3 3 scale
+16 coolTree pop
+
+showpage

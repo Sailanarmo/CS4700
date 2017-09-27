@@ -1,0 +1,21 @@
+What is an identifier?
+	Keywords - Recognized by the Lexor, or scanner, identified in the language such as if
+	Reserved Words - names that have pre-defined meanings.
+
+
+Bindings
+	- If the binding starts before run time and never changes, we call that Static Binding. int x; in C++
+	- If it changes after run time, then it is called Dynamic Binding. x = 5 then x = foo in python, can go from int to string
+	
+Binding Time
+	- Language design, what does if mean?
+	- Language Implementation, as long as it does this it is okay. std::map<>
+	- Compile Time, if you create a constant, you might have it compiled here
+	- Link Time
+	- Load Time
+	- Run Time
+
+
+	
+	
+

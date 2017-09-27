@@ -1,0 +1,30 @@
+Prolog is a logic language.
+	Theorem Provers
+
+Statements occur in files
+A form of Database
+
+Can have predicates
+	names(args...)
+	Asserts that predicate name is true for given arguments
+	The axioms of the logic system
+
+male('William the Conqueror'). I assert that this statement is true
+king('William the conqueror').
+
+male('Robert Curthose').
+parent('William the Conqueror', 'Robert Curthose'). Robert Curthose is a parent to William the conqueror.
+
+What do variables look like?
+
+male(x). 
+
+x can be anything in our list that is a male.
+
+parent('William the Conqueror', x),parent(x,y). I want the grandchildren of William the Conqueror
+
+write('Hello World'). Writes hello world, and returns true.
+
+Unification is the process of deciding whether something matches.
+
+

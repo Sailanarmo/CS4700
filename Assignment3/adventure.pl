@@ -95,6 +95,11 @@ container(pylon_a).
 container(pylon_b).
 container(pylon_c).
 
+isHeavy(closet).
+isHeavy(pylon_a).
+isHeavy(pylon_b).
+isHeavy(pylon_c).
+
 equipment(laser).
 equipment(bunsen_burner).
 

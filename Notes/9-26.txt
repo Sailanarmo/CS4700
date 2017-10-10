@@ -3,9 +3,11 @@ What is an identifier?
 	Reserved Words - names that have pre-defined meanings.
 
 
-Bindings
+Bindings - is the association of some attribute, like assignment, associates a variable with a value
 	- If the binding starts before run time and never changes, we call that Static Binding. int x; in C++
 	- If it changes after run time, then it is called Dynamic Binding. x = 5 then x = foo in python, can go from int to string
+	- Its name is x, its value is 5, its type is int, and its location is some address.
+		-x and int are static, value is dynamic.
 	
 Binding Time
 	- Language design, what does if mean?
@@ -15,7 +17,14 @@ Binding Time
 	- Load Time
 	- Run Time
 
+Variables
+	Type
+		static vs dynamic type, Python vs C++	
+	Value
+		if your value is a static binding, we call this a constant variable
 
-	
-	
+Aliases
+	Has another name, most common source are pointers.
+	Source of subtle errors
+
 

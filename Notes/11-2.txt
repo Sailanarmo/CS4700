@@ -1,0 +1,45 @@
+Short-Circuit Evaluation
+	
+	If the value of an expression can be and is determined without evaluating the whole expression it is called short-circuit evaluation
+	Very common with boolean algebra
+		0 * X = 0
+		1 + X = 1
+		Also possible with memoized pure functions
+
+Lazy vs. Eager Evaluation
+	
+	Eager evaluation - expressions become values at earliest opportunity
+	Lazy evaluation - expressions become values at the latest possible moment
+		Very common in functional languages
+		Allows expression of infinite objects - but not their evaluation
+
+Arithmetic Expressions
+	
+	Unary
+	Binary
+		Infix
+		Prefix
+		Postfix
+	Ternary
+
+Boolean Expressions
+	
+	Comparisons
+		Two Way comparisons
+		Three Way comparison
+	Boolean Algebra
+
+Assignment
+	
+	Procedural Languages - Write to memory, always a side effect
+	Functional and logic - Create a new name binding to a constant value
+
+Type Conversions
+	
+	narrowing
+	widening
+	casting
+	Which operations are allowed?
+	Which are implicit and which explicit?
+	Are mixed mode expressions allowed?
+	

@@ -1,0 +1,24 @@
+1. Evaluation
+	Criteria
+	Features
+
+3-4. Parsing and Scanning
+	- RE <- FA <- NFA
+	- Context Free Grammar
+
+	Look at book
+
+5. Value
+	- Lifetime
+	- Scope
+	- Binding
+
+6. Type
+	- Built in Data Types
+	- Abstraction Support
+
+15. Prolog
+
+Bonus PostScript
+
+

@@ -1,0 +1,52 @@
+Nesting Ambiguity
+	
+	if e1 if e2 c1 else c2
+	Where does the else belong
+	Only occurs if clause form permits
+
+Multiple Selection
+	
+	Switch - Case - Patterns
+	What is the form of the selection expression
+	How are cases specified
+	What if nothing matches?
+
+Multiple Selection Implementation
+	
+	Nested ifs
+	Tree - (Command Pattern)
+	Jump tables
+
+Iteration
+	
+	Used for repetition
+	how is it controlled?
+	Where does the control structure appear
+	Can be replaced by recursion
+
+Counter Controlled Loops
+	
+	Has a loop variable
+	Loop variable has a begin,end and step
+	For
+	For each
+
+Logically Controlled Loops
+	
+	Has a condition
+	Is the test before or after the loop
+	while(e)
+	do .. while(e)
+
+Loop Controlled Statements
+
+	User Located loop exits
+		break
+		last
+	Skip statement
+		continue
+	Use to eliminate some uses of goto
+
+Goto Considered Harmful
+
+	

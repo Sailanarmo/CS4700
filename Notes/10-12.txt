@@ -1,0 +1,63 @@
+Variables
+
+	You need a type and a value
+
+	Type
+		
+	Value
+
+Two types of Values
+	L-Values
+		Must have memory assigned to it, all L-Values are R-Values.	
+	R-Values
+		May not have memory assigned to it.
+		Pure R-Values are reserved for literals.
+		Literal R-Values
+
+	x = 3; x is an L-Value, 3 is an R-Value
+
+Named Constants
+	if it is bound to a value only once, it is a constant.
+	This happens during compile time
+
+Lifetime
+	A variables life time goes from when it is visible to no longer being visible
+	Static Variables
+		This does not happen at run time. 
+		#define, static
+	Stack-Dynamic
+		Being managed for you on the stack, all local variables are stack dynamic.
+		Life times are lexiographically extended	
+		Bound to a scope
+	Explicit Heap-Dynamic
+		This is where you call new and delete, not bound by their scope.	
+	Implicit Heap-Dynamic
+		The language is doing the creation and destroying for you. Like poopy Ja-va
+
+Scope
+	Scope is the range of statements where something is visible
+	An object is visible if it can be referenced
+	An entity is local to a scope if it is defined there
+	An entity is global if it is visible everywhere
+
+Static Scope
+	Also called Lexical Scoping
+	Scoping can be determined prior to run time using only the program text
+
+Dynamic Scope
+	Scoping depends on run time context
+	Generally considered to be less reliable
+	Harder to reason about due to context dependence
+
+Referencing Enviornment
+	What is visible to a statement? 
+
+Block
+	A set of Statements
+	Starts a new scope
+	Generally used in statically scoped languages
+	Introduced by ALGOL and available in many languages
+
+
+
+	

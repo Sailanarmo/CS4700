@@ -1,0 +1,58 @@
+What tools exist for encapsulation and abstraction?
+	
+	can you declare public/private?
+	Do you have objects? Hidden data?
+
+User defined type constructor
+	
+	pointer constructor
+	can you write user defined type constructors?
+	Vector is a type constructor
+
+Critical for generic programming style
+	
+	Duck typing? "If you write code that looks like a duck, sounds like a duck, it is a duck."
+	Pattern typing
+
+===============================================================================
+
+Expression
+	
+	Means of expressing computation
+	Combination of values and operators that has a value
+
+Operator Overloading
+	
+	Can users overload operators? 
+	Does the language overload operators?
+	How does this affect the language? 
+
+Side Effects
+	
+	A side effect is any observable change in a global state
+	Ex:
+		Output paramters: Changes something inside the expression
+		Global Variables
+		Class Variables
+		IO
+
+Referential Transparancy
+	
+	If an expression has no side effects it can be thought of as a reference to its value.
+	Functions are called pure if they have this property
+	Four major causes of impurity
+		Error
+		Non-determinism
+		Context
+		Destruction
+
+Short-Circuit Evaluation
+
+	If the value of an expression can be can be and is determined without evaluating the whole expression it is called short-circuit evaluation
+	Very common with boolean algebra
+		0 * X = 0
+		1 + X = 1
+	Also possible with memoized pure functions
+
+
+	

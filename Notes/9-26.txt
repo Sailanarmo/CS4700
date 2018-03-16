@@ -6,7 +6,7 @@ What is an identifier?
 Bindings - is the association of some attribute, like assignment, associates a variable with a value
 	- If the binding starts before run time and never changes, we call that Static Binding. int x; in C++
 	- If it changes after run time, then it is called Dynamic Binding. x = 5 then x = foo in python, can go from int to string
-	- Its name is x, its value is 5, its type is int, and its location is some address.
+	- If name is x, its value is 5, its type is int, and its location is some address.
 		-x and int are static, value is dynamic.
 	
 Binding Time

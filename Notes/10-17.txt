@@ -1,0 +1,30 @@
+Type and Abstraction
+
+===========================================
+
+Type System
+	Type Constructors
+	Descriptors
+	Sometimes called a type algebra
+
+	T const**const
+
+Encapsulation and Information Hiding
+	Does the language support thinking at the right level of abstraction?
+	Does the language support thinking at multiple levels of abstraction?
+	Consider Float
+
+Type Equivalence
+	Types are equivalent if no coercion is needed for compatibility
+	Name equivalence - types are the same if they are named the same
+	Structure equivalence - types are the same if the structure is the same
+		
+		struct foo
+		{
+			int x;
+		};
+
+		struct bar
+		{
+			int y;
+		};

@@ -34,7 +34,7 @@ look(Room):-name(Room,Name),nl,write("You are in "), longDesc(Room),nl,nl,write(
 %if search is a container, then list the items, else it is an object and should return a desc.
 search(Item):-(container(Item) -> write("You are searching "), longDesc(Item),nl,write("It Contains: "),nl, listItems(Item) ; longDesc(Item)),!.
 
-move(P):-here(X),retract(here(X)),asserta(here(P)),look(P),!.
+uMove(P):-here(X),retract(here(X)),asserta(here(P)),look(P),!.
 
 take(Item):-(here(X),isItem(Item,X) -> isItem(Item,X),retract(location(Item,P)),asserta(has(Item)),nl,write("You took the "), write(Item),write(" from the "),write(P),nl,nl,write("You have: "),nl,inventory ; write("That Item does not exist.")),!.
 

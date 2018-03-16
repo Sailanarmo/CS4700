@@ -1,0 +1,76 @@
+Type Equivalence
+	Types are Equivalent
+
+Strong Types
+	Strongly Typed language, a language is strongly typed if a language can detect strongly typed errors. 
+
+Primitive Types
+	Integers
+	Floating Points
+	Complex
+	Decimal
+	Boolean
+	Character
+
+Enumerations
+	What forms of coercion are allowed? Are this like C iterations?
+	What is the scope of the constants?
+	How visible is the underlying representation?
+
+Array
+	What are legal subscripts? Strings? Negative Numbers?
+	Is the array range checked?
+	What operations are allowed?
+		Slicing
+		Membership
+		Transposition
+		Concatenation
+
+Array Categories
+	Static
+	Fixed stack Dynamic
+	Fixed Heap Dynamic
+	Heap Dynamic
+
+Array Implementation
+	Are multidimensional arrays allowed?
+	Are they row or column major?
+	addres[i] = address[0] + i * elementSize
+
+String Design
+	Character array or primitive?
+	Static or Dynamic length?
+
+String Operations
+	Can you slice strings?
+	Can you Concatenate strings?
+	Can you compare strings?
+	Do you support Regular Expressions in your languages?
+
+Lists
+	Very common in functional languages
+	List comprehensions
+		Construct one list from another via a function
+	Ranges
+	Infinite Lists
+		If language is lazy infinite lists are possible. 
+
+Associative Arrays
+	Also called hashs, dictionaries, or maps
+	Associate a key with a value
+	May be balanced trees or hash tables
+
+Records
+	Records are type constructors. Like Structs and Classes.
+	The types are often is fields or data members
+
+Tuples
+	Tuples are like records but fields are anonymous
+	Arise in generic programming
+
+Unions
+	List of types and value is at most one of the listed types
+	Discriminated or Free
+		A discriminated union knows what that value is
+		A Free union assumes you know what you are doing
+

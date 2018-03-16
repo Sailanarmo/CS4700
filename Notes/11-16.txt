@@ -1,0 +1,45 @@
+Indirect Subprograms
+
+	Function Pointers
+	delegates
+		A Callable and assignable object
+	virtual functions
+		implemented in terms of indirect subprograms
+
+Overloaded Functions
+	subprograms with the same name and referencing environment
+	Each must have a different protocol (number, type, and order of args)
+	Some languages(C++,Ada, Python, Ruby, others) allow operators to be overloaded
+	Usually there is some special function name that is invoked operator syntax
+
+Generic Subprograms
+	
+	Generic subprograms work on multiple types
+	the concept of a parameter is what the generic subprogram expects
+	a type is said to model the concept if it meets the requirements
+	generic programs wok on all types that model their concept
+
+Prologue and Epilogue
+
+	Function call must
+		Suspend caller
+		Compute and pass parameters
+		Pass return address
+		Transfer control
+
+	Return must
+		Resolve out parameters
+		Pass return value
+		Return control
+		Resume caller into previous state
+
+Activation Records
+
+	Data needed by every invocation of a function
+	Stack local variables
+	Parameters
+	Return address
+	Dynamic link
+	Static link
+
+
